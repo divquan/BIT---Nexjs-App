@@ -13,6 +13,7 @@ const postcard = ({ postdetails }) => {
     <>
       <div className="flex flex-row gap-4 my-3 ">
         <BitImage width={500} src={img_url} />
+        {/*this is just a component */}
         {/* <Image src={img_url} height={450} width={35} /> */}
         <div>
           <h2 className="mb-4 text-xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-black">
