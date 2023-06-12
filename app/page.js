@@ -13,6 +13,7 @@ export default function Home() {
 
   const handleClick = async () => {
     let imgUrl = "";
+
     // upload
     setStatus("uploading");
     if (!file) return console.log("no file");
@@ -24,6 +25,7 @@ export default function Home() {
       description: description,
       img_url: imgUrl,
     };
+
     // add to firestore
     const { result, error } = await addToData(data);
 

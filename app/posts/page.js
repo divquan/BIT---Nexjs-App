@@ -21,9 +21,9 @@ const Posts = () => {
     fetchPosts();
   }, []);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <div>
@@ -31,11 +31,11 @@ const Posts = () => {
         All posts
       </h1>
       <div>
-        <Suspense fallback={<div>Loading...</div>}>
-          {items.map((doc) => (
-            <PostCard postdetails={doc} key={doc.id} />
-          ))}
-        </Suspense>
+        {/* <Suspense fallback={<div>Loading...</div>}> */}
+        {items.map((doc) => (
+          <PostCard postdetails={doc} key={doc.id} />
+        ))}
+        {/* </Suspense> */}
       </div>
     </div>
   );

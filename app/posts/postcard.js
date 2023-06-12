@@ -2,17 +2,18 @@ import Link from "next/link";
 import React from "react";
 import noImage from "../../public/noImage.png";
 import Image from "next/image";
+import BitImage from "./Image";
 const postcard = ({ postdetails }) => {
   console.log(postdetails);
   const { id, data } = postdetails;
   const { img_url, title, description } = data;
+
+  //I
   return (
     <>
       <div className="flex flex-row gap-4 my-3 ">
-        <img
-          src={img_url || noImage}
-          className=" aspect-[4/3] object-cover w-40"
-        />
+        <BitImage width={500} src={img_url} />
+        {/* <Image src={img_url} height={450} width={35} /> */}
         <div>
           <h2 className="mb-4 text-xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-black">
             {title}
